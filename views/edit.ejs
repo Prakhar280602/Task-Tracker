@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-900 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded shadow-md w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-6 text-center">Edit Name</h1>
+        <form action="/edit" method="post">
+            <div class="mb-4">
+                <label for="previous-name" class="block text-gray-700 font-bold mb-2 " >Previous Name</label>
+                <input type="text" id="previous-name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"  placeholder="Enter previous name" value="<%= filename%>"  name="previous" />
+            </div>
+            <div class="mb-6">
+                <label for="new-name" class="block text-gray-700 font-bold mb-2">New Name</label>
+                <input type="text" id="new-name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter new name" name="new" />
+            </div> 
+            <div class="flex items-center justify-between">
+                <button type="submit" class="bg-yellow-400 hover:bg-yellow-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Update Name</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
