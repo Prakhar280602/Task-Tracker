@@ -43,12 +43,11 @@ router.get('/edit/:filename', function (req, res, next) {
 
 /* POST edit page */
 router.post('/edit', function (req, res, next) {
-  console.log(req.body);
+  console.log(req.body); 
   fs.rename(`./files/${req.body.previous}`, `./files/${req.body.new}`, function (err) {
     res.redirect('/');
   });
 });
-
 
 
 module.exports = router;
